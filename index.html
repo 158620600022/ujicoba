@@ -1,1 +1,553 @@
-testing
+<html lang="id">
+<head><meta charset="utf-8">
+	<link href="lita-icon.png" rel="shortcut icon" />
+	<link href="lita-icon.png" rel="icon" sizes="32x32" />
+	<link href="lita-icon.png" rel="icon" sizes="192x192" />
+	<link href="https:litagalaxy.com" rel="canonical" />
+	<title>Lita Galaxy Web Version</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"><meta name="description" content="Lita Galaxy Web Version">
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet" />
+	<style type="text/css">*{
+    margin:0 auto;
+    box-sizing:border-box;
+    
+}            
+body{
+    font-family:system-ui;
+    background:#fafbfc;
+    color:black;
+}
+header{
+    position:sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+    background: #6f42c1;
+    box-shadow: 1px 2px 10px black;
+}
+footer{
+    position:sticky;
+    bottom: 0;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+    background: #6f42c1;
+    box-shadow: 1px 2px 10px black;
+}
+.Head-Logo {
+    margin: 0 auto;
+    text-align: center;
+}  
+.Head-Logo amp-img{
+    max-width:70%;
+}
+.Footer-Logo {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: white;
+}
+.Footer-Logo div{
+  width:50%;
+}
+.Footer-Logo amp-img{
+    max-width:60%;
+}
+main{
+    width:40%;
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+}
+.MainApp{
+    background: #6f42c1;
+    padding:10px;
+    font-size:20px;
+    color:white;
+    text-align:center;
+}
+.BodyApp{
+    padding:10px;
+}
+.BodyApp-Item{
+    display: flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+.rf-status{
+    background: #f6f8fa;
+    border-radius: 4px;
+    padding:10px;
+    width:100%;
+    display: flex;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+}
+.Item-Domain{
+    width:50%;
+}
+.Item-Domain a{
+    color:#6f42c1;
+    text-decoration:none;
+
+}
+.Status{
+    width:50%;
+    text-align:right;
+}
+.serverOK{
+    color:#12c312;
+}
+.serverFAIL{
+    color:#c31212;
+}
+/*  */
+.container{
+  width:100%;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+}
+.content{
+  border-left: 2px solid #ddd;
+  padding-left: 30px;
+}
+
+.content .box{
+  width: 100%;
+  padding:10px;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 10px;
+  font-family:sans-serif;
+  position:relative;
+  margin-left: -15px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    
+}
+
+.box:before{
+  content:'';
+  display: block;
+  width: 10px;
+  height:10px;
+  border-radius: 50%;
+  background: #6f42c1;
+  border: 3px solid #ddd;
+  position:absolute;
+  top: 10px;
+  left: -24px;
+}
+.box em{color:#6f42c1;font-weight:bold;}
+.box h3{color:#6f42c1;font-size: 18px;float:left;}
+.box p{font-size:14px;clear: both;line-height:20px;}
+.notice-box {
+    float: right;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.nightly-info{
+  background:#363636;
+}
+.release-box{
+    background:#6f42c1;
+}
+.info-box{
+    background:#12c312;
+}
+.error-alert{
+    color:#c31212;
+}
+.severUP{
+  color:#c312b5;
+}
+.input-box {
+	 position: relative;
+	 margin: 10px 0;
+}
+ .input-box .input-label {
+	 position: absolute;
+	 color: #80868b;
+	 font-size: 16px;
+	 font-weight: 400;
+	 max-width: calc(100% - (2 * 8px));
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+	 white-space: nowrap;
+	 left: 8px;
+	 top: 13px;
+	 padding: 0 8px;
+	 transition: 250ms;
+	 user-select: none;
+	 pointer-events: none;
+}
+ .input-box .input-label svg {
+	 position: relative;
+	 width: 15px;
+	 height: 15px;
+	 top: 2px;
+	 transition: 250ms;
+}
+ .input-box .input-1 {
+	 box-sizing: border-box;
+	 height: 50px;
+	 width: 100%;
+	 border-radius: 4px;
+	 color: #202124;
+	 border: 1px solid #dadce0;
+	 padding: 13px 15px;
+	 transition: 250ms;
+}
+ .input-box .input-1:focus {
+	 outline: none;
+	 border: 2px solid #1a73e8;
+	 transition: 250ms;
+}
+ .input-box.error .input-label {
+	 color: #f44336;
+	 top: -8px;
+	 background: #fff;
+	 font-size: 11px;
+	 transition: 250ms;
+}
+ .input-box.error .input-1 {
+	 border: 2px solid #f44336;
+}
+ .input-box.focus .input-label, .input-box.active .input-label {
+	 color: #009688;
+	 top: -8px;
+	 background: #fff;
+	 font-size: 11px;
+	 transition: 250ms;
+}
+ .input-box.focus .input-label svg, .input-box.active .input-label svg {
+	 position: relative;
+	 width: 11px;
+	 height: 11px;
+	 top: 2px;
+	 transition: 250ms;
+}
+ .input-box.active .input-1 {
+	 border: 2px solid #1a73e8;
+}
+.btn {
+	 background: #fff;
+	 color: #333;
+	 cursor: pointer;
+	 border: none;
+	 white-space: normal;
+	 letter-spacing: 0.25px;
+	 font-weight: 400;
+	 font-size: 14px;
+	 padding: 5px 15px;
+	 border-radius: 4px;
+	 line-height: 20px;
+	 min-width: 88px;
+	 transition: 250ms;
+}
+ .btn:hover {
+	 background: #ddd;
+	 transition: 250ms;
+}
+ .btn:focus {
+	 outline: none;
+}
+ .btn-primary {
+	 background: #9c27b0;
+	 color: #fff;
+	 transition: 250ms;
+}
+ .btn-primary:hover {
+	 background: #287ae6;
+	 box-shadow: 0 1px 1px 0 rgba(66, 133, 244, 0.45), 0 1px 3px 1px rgba(66, 133, 244, 0.3);
+	 transition: 250ms;
+}
+ .pull-right {
+	 float: right;
+}
+ .clear {
+	 clear: both;
+}
+
+#table-list {
+overflow-x: auto;
+background: white;
+margin-top: 10px;
+padding-bottom: 15px;
+box-shadow: 0 0.55rem 1.25rem rgb(0 65 98 / 4%);
+-webkit-box-shadow: 0 0.55rem 1.25rem rgb(0 65 98 / 4%);
+box-shadow: 0 0.55rem 1.25rem rgb(0 65 98 / 4%);
+}
+
+table {
+width: 100%;
+margin: 0 auto;
+border-collapse: collapse;
+table-layout: fixed;
+font-size: 0.88em;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+
+.t-header th {
+font-size: 1em;
+height: 1.8em;
+}
+
+th,
+td {
+padding: 0.65em;
+text-align: center;
+}
+
+th{color:white;background-color: #673ab7;}
+
+
+td:nth-child(2) {
+color: #666;
+}
+
+tbody tr {
+background-color: #f8fafb;
+border-top: 1px solid #edeff0;
+border-bottom: 1px solid #edeff0;
+}
+
+.pFirst{
+  margin-top:10px;
+  margin-bottom:10px;
+  font-size:12px;
+}
+strong{color:#673ab7;}
+
+
+.RoomInput {
+    box-sizing: border-box;
+    /* height: 50px; */
+    width: 20%;
+    border-radius: 4px;
+    color: #202124;
+    border: 1px solid #0759ff;
+    padding: 6px 15px;
+    transition: 250ms;
+}
+.ResultNotice {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: white;
+    background: linear-gradient(to bottom, #6572ad, #2d3566);
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: lime;
+}
+.profileLita {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px!important;
+}
+.thumbProfile{
+    width: 30%;
+    text-align: center;
+}
+.descProfile{
+    width: 65%;
+}
+.autosize {
+    display: block;
+        overflow: hidden;
+        resize: none;
+}
+.credits {
+    position: fixed;
+    right: 0;
+    top: 35%;
+    background-color: #1e1e1eb0;
+    padding: 10px;
+    font-size: 12px;
+    z-index: 990;
+    color: #fff;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+.credits a{
+color:gold;
+text-decoration: none;
+}
+
+.credits a:hover{
+color:white;
+}
+
+.ModalNotification {
+    width: 100%;
+    z-index: 999;
+    background-color: #1e1e1eb0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.insidemodal {
+    position: relative;
+    width: 40%;
+    height: auto;
+    background: #d7d7d7;
+    border-radius: 8px;
+    margin: 0 auto;
+    left: 0;
+    bottom: 0;
+    top: 10%;
+    right: 0;
+    text-align: center;
+    color: black;
+    padding: 10px;
+}
+.insidemodal p{
+    font-size: 13px;
+}
+.login-input {
+    position: relative;
+    /* margin: 10px 0; */
+    padding: 10px;
+}
+
+.login-input .input-token {
+    box-sizing: border-box;
+    height: 35px;
+    width: 100%;
+    border-radius: 4px;
+    color: #202124;
+    border: 1px solid #dadce0;
+    padding: 10px 15px;
+    transition: 250ms;
+}
+.Footer-Logo a.logout {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+.SideNav-Hover {
+    right: 5px;
+    position: fixed;
+    top: 88%;
+    margin: 0 auto;
+    padding: 0;
+    z-index: 999;
+
+}
+
+fieldset{
+    background: linear-gradient(to bottom, #6572ad, #2d3566);
+    border: none;
+    border-radius: 8px;
+}
+.radio-item-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.radio-item-container .radio-item label{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+ul.itemlist , ul.itemlist2 {
+    background-image: linear-gradient(to bottom, #343b54, #646d8d); 
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.itemlist, .itemlist2 {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.itemlist li{
+    margin:0px 5px;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    
+}
+.itemlist2 li{
+    margin:0px 5px;
+    position: relative;
+    width: 10%;
+    height: 30%;
+    
+}
+@media (max-width: 800px) {
+main{
+    width:100%;
+}
+.insidemodal{
+    width: 80%;
+}
+}
+	</style>
+</head>
+<body>
+<div class="ModalNotification">
+<div class="insidemodal">
+<h3 style="color:purple">Lita Galaxy Web</h3>
+
+<form action="" method="post">
+<div class="login-input active"><input class="input-token" maxlength="64" minlength="64" name="token" placeholder="Masukan Token" required="" type="text" /></div>
+<button class="btn btn-primary" name="submit" type="submit">Submit</button>
+
+<div class="clear"></div>
+</form>
+&nbsp;
+
+<h3 style="color:purple">Tutorial Get Token LITA</h3>
+
+<ul>
+	<li style="text-align: left;"><span style="font-size:10px;">1. Login Akun Lita (Yang Akan di Ambil Tokennya) via Website (PC/LAPTOP)</span></li>
+	<li style="text-align: left;"><span style="font-size:10px;">2. Tekan tombol &quot;CTRL + SHIFT + I &quot; di keyboard</span></li>
+	<li style="text-align: left;"><span style="font-size:10px;">3. Ketika Console Google Chrome browser kalian sudah terbuka, klik pada bagian network di console</span></li>
+	<li style="text-align: left;"><span style="font-size:10px;">4. Reload halaman lita kalian, dan perhatikan di bagian network ada kata &quot;account&quot;</span></li>
+	<li style="text-align: left;"><span style="font-size:10px;">5. Pada bagian Headers, Scroll cari access token lalu copas</span></li>
+	<li style="text-align: left;"><span style="font-size:10px;">6. Masukan token tersebut ke atas untuk login LITA Galaxy Web</span></li>
+	<li style="text-align: left;"><span style="font-size:10px;">Jangan lupa unduh versi APK <a href="https://files.appsgeyser.com/Lita%20Galaxy%20v2_17147139.apk">disini</a></span></li>
+</ul>
+
+<p style="text-align: left;"></p>
+
+<p><span style="font-size:10px;">Klik Gambar untuk zoom</span></p>
+<a href="./tes.png"><img src="tes.png" width="100%" /></a>
+
+<p></p>
+
+<p></p>
+
+<h3><a href="./aturan.html">Catatan Penting</a></h3>
+</div>
+</div>
+<script type="text/javascript">
+var textarea = document.getElementById("contentPesan");
+var bioarea = document.getElementById("contentBIO");
+bioarea.addEventListener("input", autoResize, false);
+textarea.addEventListener("input", autoResize, false);
+
+function autoResize() {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+}
+</script></body>
+</html>
